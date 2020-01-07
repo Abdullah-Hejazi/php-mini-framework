@@ -1,0 +1,12 @@
+<?php
+
+    require __DIR__ . '/vendor/autoload.php';
+
+    use Framework\Console;
+    use Framework\Environment;
+
+    Environment::Generate('Settings/.env');
+
+    $console = new Console($argv, $argc);
+    echo "\n".$console->output."\n";
+?>
