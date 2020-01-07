@@ -2,7 +2,7 @@
     use Framework\Route;
 
     // Routes
-    // Route::Get('/', 'YourController@method');
+    Route::Get('/', 'TestController@index');
 
 
     // Middlewares
