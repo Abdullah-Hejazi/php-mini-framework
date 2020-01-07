@@ -1,18 +1,18 @@
 {
-    "name": "amahe/mini-framework",
+    "name": "amahe/php-mini-framework",
 	"minimum-stability": "stable",
 	"prefer-stable": true,
 	"license": "MIT",
 	"repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/Abdullah-Hejazi/mini-framework"
+            "url": "https://github.com/Abdullah-Hejazi/php-mini-framework"
         }
     ],
     "require": {
 		"php": "^7.2"
 	},
-	"description": "A Mini Php MVC framework made for educational purposes, but can be used for production",
+	"description": "A Mini Php MVC framework made for educational purposes.",
     "autoload": {
         "psr-4": {
             "Framework\\": "vendor/Framework/",
