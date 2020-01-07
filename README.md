@@ -10,7 +10,7 @@ A mini php framework made for educational purposes, but is stable enough to use 
 
 ### Usage:
 ###### Install using composer :
-`composer create-project amahe/mini-framework your_project_name`
+`composer create-project Abdullah-Hejazi/php-mini-framework your_project_name`
 
 ###### The framework is simple :
 * Go to the Settings/router folder and add your route
