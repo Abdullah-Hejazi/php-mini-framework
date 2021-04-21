@@ -27,6 +27,11 @@
         }
 
         public function Start() {
+            $c = new $this->controller();
+            foreach($c->middlewares as $middleware) {
+                Route::RegisterMiddleware($middleware);
+            }
+
             return $this->ExecuteMiddlewares();
         }
 
@@ -47,6 +52,7 @@
 
         public function ExecuteController() {
             $c = new $this->controller();
+
             $methodName = $this->method;
             return $c->handle($methodName, $this->request);
         }

@@ -42,7 +42,7 @@
                 ['//', '<!--', '-->']
             ];
 
-            $fileData = file_get_contents('./Views/'.$file);
+            $fileData = file_get_contents(INITIAL_DIR . '/Views/'.$file);
             foreach($replacements as $replacementKey => $replacementValue) {
                 $fileData = str_replace($replacementKey, $replacementValue, $fileData);
             }
@@ -53,7 +53,7 @@
                 $fileData = preg_replace('#'.$regexReplacement[0].'(.*)#', $regexReplacement[1]."$1 ".$regexReplacement[2], $fileData);
             }
 
-            file_put_contents('./Settings/Cache/'.$file, $fileData);
+            file_put_contents(INITIAL_DIR . '/Settings/Cache/'.$file, $fileData);
 
             ob_start();
 
@@ -61,7 +61,7 @@
                 $$key = $value;
             }
 
-            include './Settings/Cache/'.$file;
+            include INITIAL_DIR . '/Settings/Cache/'.$file;
             $returned = ob_get_contents();
             ob_end_clean();
             return $returned;

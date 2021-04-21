@@ -58,6 +58,23 @@
             $stmt->execute($data);
         }
 
+        public static function RawSelect($query) {
+            $class = get_called_class();
+            $model = new $class();
+
+            $db = \Framework\DB::getInstance();
+            $statement = "SELECT * FROM ".$model->table." ".$query;
+
+            $stmt = $db->prepare($statement);
+            $stmt->execute();
+
+            $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            if(!$result) {
+                return false;
+            }
+            return $result;
+        }
+
         public function delete() {
             if(isset($this->{$this->primary})) {
                 $db = \Framework\DB::getInstance();

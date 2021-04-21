@@ -30,6 +30,11 @@
             return $result;
         }
 
+        public function redirect($page) {
+            header("Location: " . $page);
+            die();
+        }
+
         public function required($name) {
             return (isset($this->data[$name]) && !empty($this->data[$name]));
         }

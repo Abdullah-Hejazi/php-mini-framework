@@ -12,7 +12,7 @@
             it will retrieve the data from this array as well 
         */
         protected $data = [
-            'id'                =>      'INT'
+            'id'                =>      'INT AUTO_INCREMENT'
         ];
     };
 ?>
